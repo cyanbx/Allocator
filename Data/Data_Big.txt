@@ -1,0 +1,56 @@
+----------------
+Resize int MemoryPool_alloc
+
+Elapsed time: 0.00667202 seconds.
+
+
+
+----------------
+Resize int Malloc_alloc
+
+Elapsed time: 0.0102015 seconds.
+
+
+---------------
+Resize int Std::allocator
+
+Elapsed time: 0.00589324 seconds.
+
+
+----------------
+Resize Point2D MemoryPool_alloc
+
+
+----------------
+Resize Point2D Malloc_alloc
+
+
+---------------
+Resize Point2D Std::allocator
+
+
+----------------
+Create int MemoryPool_alloc
+
+
+
+----------------
+Create int Malloc_alloc
+
+
+
+
+---------------
+Create int Std::allocator
+
+
+----------------
+Create Point2D MemoryPool_alloc
+
+
+----------------
+Create Point2D Malloc_alloc
+
+
+---------------
+Create Point2D Std::allocator
