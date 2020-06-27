@@ -2,13 +2,14 @@
 #define _ALLOCATOR_H_
 #include <cstdlib>
 
+
 template <class T>
 class Allocator {
 private:
-    // 空间大小对齐到8位
-    enum {ALIGN = 8};
-    // 最大链表空间256byte，256以上直接malloc，256以下调用链表空间
-    enum {MAX_BYTES = 256};
+    // 空间大小对齐到64位
+    enum {ALIGN = 64};
+    // 最大链表空间1024byte，1024以上直接malloc，1024以下调用链表空间
+    enum {MAX_BYTES = 1024};
     // 链表个数
     enum {NFREELEISTS = MAX_BYTES / ALIGN};
 
@@ -25,7 +26,7 @@ private:
 
     // 不同大小的free_list链表的首地址
     node* volatile free_list[NFREELEISTS] = 
-    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, };
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
     // 根据需求空间的大小找到free_list中对应的下标
     static size_t freelist_index(size_t bytes) {
@@ -57,21 +58,37 @@ private:
             start_free += total_bytes;
             return result;
         }
-        // 需要重新从系统内存中申请，给内存池添加新内存
+        //内存池剩余空间连一块内存都无法提供
         else {
             size_t bytes_to_get = 2 * total_bytes + ROUND_UP(heap_size >> 4);
-            if (bytes_left > 0) {
+            if (bytes_left > 0) {//将内存池中剩余的内存分配给合适的free_list
                 node* volatile* my_free_list = free_list + freelist_index(bytes_left);
                 ((node*)start_free)->free_list_link = *my_free_list;
                 *my_free_list = (node*)start_free;
             }
+            //向Heap申请内存
             start_free = (char*)malloc(bytes_to_get);
-            // 这部分原来的代码是 系统也没法malloc到新内存了，本题暂且忽略了这一部分
-            if (start_free == 0) {
-                // no enough space
+            if (start_free == NULL) {
+                //heap空间不足，malloc失败
+                //试着搜寻一下freelist中"尚有未用但足够大的内存块"
+                for(size_t i = size; i < MAX_BYTES; i += ALIGN){
+                    node *volatile *my_free_list = free_list + freelist_index(i);
+                    node *temp = *my_free_list;
+                    if (temp != NULL) {
+						*my_free_list = temp->free_list_link;
+						start_free = (char*)temp;
+						end_free = start_free + i;
+						//递归调用，调整nobjs
+						return chunk_alloc(size, nobjs);
+					}
+                }
+                //内存完全分配不出来
+                end_free = NULL;
             }
-            heap_size + -bytes_to_get;
+            heap_size += bytes_to_get;
             end_free = start_free + bytes_to_get;
+
+            //递归调用，调整nobjs
             return (chunk_alloc(size, nobjs));
         }
     }
@@ -114,8 +131,8 @@ public:
     typedef const T* const_pointer;
     typedef T& reference;
     typedef const T& const_reference;
-    typedef size_t size_type;
-    typedef ptrdiff_t difference_type;
+    typedef std::size_t size_type;
+    typedef std::ptrdiff_t difference_type;
 
     template <class U>
     struct rebind {
