@@ -1,8 +1,8 @@
-#ifndef _ALLOCATOR_H_
-#define _ALLOCATOR_H_
+#ifndef SALLOCATOR_H_
+#define SALLOCATOR_H_
 
 template <class T>
-class Allocator {
+class sAllocator {
 public:
     typedef T value_type;
     typedef T* pointer;
@@ -14,14 +14,16 @@ public:
 
     template <class U>
     struct rebind {
-        typedef Allocator<U> other;
+        typedef sAllocator<U> other;
     };
 
-    Allocator() throw() {};
-    Allocator(const Allocator& other) throw() {};
-    template <class U> Allocator(const Allocator<U>& other) throw() {};
+    sAllocator() throw() {};
+    sAllocator(const sAllocator& other) throw() {};
+    template <class U> sAllocator(const sAllocator<U>& other) throw() {};
 
-    ~Allocator() {};
+    ~sAllocator() {
+        // printf("time: %d\n", malloc_time);
+    };
 
     pointer address(reference x) const {
         return &x;
@@ -32,6 +34,7 @@ public:
 
     pointer allocate(size_type n, const void* hint = 0) {
         pointer p = (pointer)::operator new((size_t)(n * sizeof(T)));
+        malloc_time++;
         return p;
     }
 
@@ -50,6 +53,12 @@ public:
     void destroy(pointer p) {
         p->~T();
     }
+
+    static int malloc_time;
 };
+
+template <class T>
+int sAllocator<T>::malloc_time = 0;
+
 
 #endif
