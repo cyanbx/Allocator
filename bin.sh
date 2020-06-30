@@ -1,0 +1,1 @@
+/usr/bin/clang++ ${file} -I ${workspaceFolder}/include/ -std=c++11 -O3 -o ${workspaceFolder}/bin/${fileBasenameNoExtension}

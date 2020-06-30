@@ -6,6 +6,7 @@
 #include "alloc_with_pool.h"
 #include "sample_allocator.h"
 
+/*The test given by PTA (TestGiven.cpp) is a case with resize size radomly given in the range of TestSize( 1e4 ).*/
 
 template<class T>
 using MyAllocator = std::allocator<T>; // replace the std::allocator with your allocator
