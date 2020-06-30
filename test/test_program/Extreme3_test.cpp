@@ -10,17 +10,14 @@ template <class T>
 using MyAllocator = std::allocator<T>;  // replace the std::allocator with your allocator
 using Point2D = std::pair<int, int>;
 
-const int TestSize = 30000;//����vector����;vector��resizeʱ�ķ�Χ
-const int PickSize = 10000;//����resize����
-const int SmallSize = 100;//�ڲ���С������ʱʹ�ã���ʾvector����resize�ķ�Χ
+const int TestSize = 30000;//Number of vector when creating; Range of vector resizing
+const int PickSize = 10000;//Number of vector resizing
 
 int main()
 {
-    freopen("Extreme3.txt", "a", stdout);
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> dis(1, TestSize);
-    std::uniform_int_distribution<> dis_small(1, SmallSize);
 
     //auto start = std::chrono::high_resolution_clock::now();
     using IntDeq = std::vector<int, MyAllocator<int> >;
@@ -45,5 +42,4 @@ int main()
         << std::endl;
 
     return 0;
-    fclose(stdout);
 }

@@ -11,9 +11,7 @@ template<class T>
 using MyAllocator = Allocator<T>; // replace the std::allocator with your allocator
 using Point2D = std::pair<int, int>;
 
-const int TestSize = 1000;//创建list个数;list在resize时的范围
-const int PickSize = 1000;//进行resize次数
-const int SmallSize = 100;//在测试小数据量时使用，表示list进行resize的范围
+const int TestSize = 1000;//Number of list when creating
 
 int main()
 {

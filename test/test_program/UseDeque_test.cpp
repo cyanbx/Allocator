@@ -10,9 +10,8 @@ template<class T>
 using MyAllocator = std::allocator<T>; // replace the std::allocator with your allocator
 using Point2D = std::pair<int, int>;
 
-const int TestSize = 10000;//创建deque个数;deque在resize时的范围
-const int PickSize = 10000;//进行resize次数
-const int SmallSize = 100;//在测试小数据量时使用，表示deque进行resize的范围
+const int TestSize = 10000;//Number of deque when creating
+
 
 int main()
 {

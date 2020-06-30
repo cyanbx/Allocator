@@ -184,7 +184,15 @@ Test if this allocator is usable in other containers.
 
 * Set
 
+    Create Set 
+
+    Insert operation test
+
 * Stack 
+
+    Create stack with Deque using our allocator
+
+    Push, pop operation test
 
 ### Results
 
@@ -205,6 +213,14 @@ Test if this allocator is usable in other containers.
 * Set
 
     Pass
+
+    <img src="assets/Screen Shot 2020-06-30 at 10.02.35 PM.png" alt="Screen Shot 2020-06-30 at 10.02.35 PM" style="zoom:50%;" />
+
+* Stack
+
+    Pass
+
+    <img src="assets/Screen Shot 2020-06-30 at 9.24.12 PM.png" alt="Screen Shot 2020-06-30 at 9.24.12 PM" style="zoom:50%;" />
 
 ### Analysis
 

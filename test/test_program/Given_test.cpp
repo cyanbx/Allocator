@@ -11,17 +11,14 @@ template<class T>
 using MyAllocator = std::allocator<T>; // replace the std::allocator with your allocator
 using Point2D = std::pair<int, int>;
 
-const int TestSize = 10000;//创建vector个数;vector在resize时的范围
-const int PickSize = 10000;//进行resize次数
-const int SmallSize = 100;//在测试小数据量时使用，表示vector进行resize的范围
+const int TestSize = 10000;  // Number of vector when creating; Range of vector resizing
+const int PickSize = 10000;  //Number of vector resizing
 
 int main()
 {
-    freopen("Given.txt", "a", stdout);
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> dis(1, TestSize);
-    std::uniform_int_distribution<> dis_small(1, SmallSize);
 
     // vector creation
     using IntVec = std::vector<int, MyAllocator<int> >;
@@ -75,5 +72,4 @@ int main()
               << std::endl;
 
     return 0;
-    fclose(stdout);
 }
