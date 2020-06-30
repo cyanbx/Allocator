@@ -1,0 +1,37 @@
+--------------pool Resize int2---------------
+Elapsed time: 0.0118385 seconds.
+Elapsed time: 0.00980478 seconds.
+Elapsed time: 0.00931604 seconds.
+Elapsed time: 0.00973333 seconds.
+Elapsed time: 0.00909841 seconds.
+Elapsed time: 0.00891359 seconds.
+Elapsed time: 0.0102488 seconds.
+Elapsed time: 0.0103176 seconds.
+Elapsed time: 0.00915224 seconds.
+Elapsed time: 0.0100098 seconds.
+Elapsed time: 0.0111173 seconds.
+
+
+--------------malloc Resize int2---------------
+Elapsed time: 0.0108066 seconds.
+Elapsed time: 0.00864114 seconds.
+Elapsed time: 0.00851398 seconds.
+Elapsed time: 0.00928979 seconds.
+Elapsed time: 0.0085244 seconds.
+Elapsed time: 0.00832667 seconds.
+Elapsed time: 0.0096653 seconds.
+Elapsed time: 0.00924929 seconds.
+Elapsed time: 0.00811681 seconds.
+Elapsed time: 0.00771111 seconds.
+
+--------------std Resize int2---------------
+Elapsed time: 0.0249732 seconds.
+Elapsed time: 0.0195826 seconds.
+Elapsed time: 0.0127756 seconds.
+Elapsed time: 0.0197457 seconds.
+Elapsed time: 0.0151304 seconds.
+Elapsed time: 0.0136642 seconds.
+Elapsed time: 0.0148113 seconds.
+Elapsed time: 0.0175971 seconds.
+Elapsed time: 0.0136928 seconds.
+Elapsed time: 0.0169095 seconds.

@@ -1,0 +1,35 @@
+--------------pool Resize Point2D---------------
+Elapsed time: 0.00129817 seconds.
+Elapsed time: 0.00244545 seconds.
+Elapsed time: 0.00143258 seconds.
+Elapsed time: 0.00151694 seconds.
+Elapsed time: 0.00262041 seconds.
+Elapsed time: 0.00178119 seconds.
+Elapsed time: 0.0014136 seconds.
+Elapsed time: 0.00196502 seconds.
+Elapsed time: 0.00140238 seconds.
+Elapsed time: 0.00151579 seconds.
+
+--------------malloc Resize Point2D---------------
+Elapsed time: 0.0023254 seconds.
+Elapsed time: 0.00225391 seconds.
+Elapsed time: 0.00335806 seconds.
+Elapsed time: 0.00286201 seconds.
+Elapsed time: 0.00326309 seconds.
+Elapsed time: 0.00242146 seconds.
+Elapsed time: 0.00262711 seconds.
+Elapsed time: 0.00222883 seconds.
+Elapsed time: 0.00476155 seconds.
+Elapsed time: 0.00243107 seconds.
+
+--------------std Resize Point2D---------------
+Elapsed time: 0.00242164 seconds.
+Elapsed time: 0.0037881 seconds.
+Elapsed time: 0.00362538 seconds.
+Elapsed time: 0.0028512 seconds.
+Elapsed time: 0.00250028 seconds.
+Elapsed time: 0.00263472 seconds.
+Elapsed time: 0.00312508 seconds.
+Elapsed time: 0.00301578 seconds.
+Elapsed time: 0.00252561 seconds.
+Elapsed time: 0.00262472 seconds.

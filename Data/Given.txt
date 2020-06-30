@@ -1,0 +1,146 @@
+--------------pool Create int---------------
+Elapsed time: 0.0930649 seconds.
+Elapsed time: 0.0888079 seconds.
+Elapsed time: 0.087959 seconds.
+Elapsed time: 0.0821851 seconds.
+Elapsed time: 0.0900343 seconds.
+Elapsed time: 0.0931164 seconds.
+Elapsed time: 0.0926603 seconds.
+Elapsed time: 0.0919755 seconds.
+Elapsed time: 0.0946618 seconds.
+Elapsed time: 0.0961349 seconds.
+
+--------------malloc Create int---------------
+Elapsed time: 0.0836015 seconds.
+Elapsed time: 0.0901506 seconds.
+Elapsed time: 0.0907893 seconds.
+Elapsed time: 0.0925909 seconds.
+Elapsed time: 0.0934823 seconds.
+Elapsed time: 0.0977491 seconds.
+Elapsed time: 0.0961467 seconds.
+Elapsed time: 0.0919799 seconds.
+Elapsed time: 0.0886796 seconds.
+Elapsed time: 0.0950415 seconds.
+
+
+--------------std Create int---------------
+Elapsed time: 0.0817066 seconds.
+Elapsed time: 0.096363 seconds.
+Elapsed time: 0.0963933 seconds.
+Elapsed time: 0.0963209 seconds.
+Elapsed time: 0.0904114 seconds.
+Elapsed time: 0.0895104 seconds.
+Elapsed time: 0.090578 seconds.
+Elapsed time: 0.0935039 seconds.
+Elapsed time: 0.0931063 seconds.
+Elapsed time: 0.0972077 seconds.
+
+--------------pool resize int---------------
+Elapsed time: 0.0581324 seconds.
+Elapsed time: 0.0412402 seconds.
+Elapsed time: 0.0492536 seconds.
+Elapsed time: 0.0500081 seconds.
+Elapsed time: 0.0462552 seconds.
+Elapsed time: 0.0502379 seconds.
+Elapsed time: 0.0513679 seconds.
+Elapsed time: 0.0488331 seconds.
+Elapsed time: 0.0476854 seconds.
+Elapsed time: 0.0458918 seconds.
+
+--------------malloc Resize int---------------
+Elapsed time: 0.0641558 seconds.
+Elapsed time: 0.0497816 seconds.
+Elapsed time: 0.0496601 seconds.
+Elapsed time: 0.0460449 seconds.
+Elapsed time: 0.0573007 seconds.
+Elapsed time: 0.0476098 seconds.
+Elapsed time: 0.0475685 seconds.
+Elapsed time: 0.0498133 seconds.
+Elapsed time: 0.049995 seconds.
+Elapsed time: 0.0507194 seconds.
+
+
+--------------std resize int---------------
+Elapsed time: 0.0662486 seconds.
+Elapsed time: 0.0488024 seconds.
+Elapsed time: 0.0534967 seconds.
+Elapsed time: 0.0480653 seconds.
+Elapsed time: 0.0485695 seconds.
+Elapsed time: 0.0488182 seconds.
+Elapsed time: 0.0484383 seconds.
+Elapsed time: 0.0484161 seconds.
+Elapsed time: 0.0533349 seconds.
+Elapsed time: 0.0471311 seconds.
+
+
+--------------pool Resize Point2D---------------
+Elapsed time: 0.112497 seconds.
+Elapsed time: 0.0915821 seconds.
+Elapsed time: 0.0933219 seconds.
+Elapsed time: 0.093864 seconds.
+Elapsed time: 0.0927498 seconds.
+Elapsed time: 0.094603 seconds.
+Elapsed time: 0.0974328 seconds.
+Elapsed time: 0.0941984 seconds.
+Elapsed time: 0.0955512 seconds.
+Elapsed time: 0.0948266 seconds.
+
+--------------malloc Resize Point2D---------------
+Elapsed time: 0.0985684 seconds.
+Elapsed time: 0.0920892 seconds.
+Elapsed time: 0.0961895 seconds.
+Elapsed time: 0.0915205 seconds.
+Elapsed time: 0.0906356 seconds.
+Elapsed time: 0.0859956 seconds.
+Elapsed time: 0.0897031 seconds.
+Elapsed time: 0.0983183 seconds.
+Elapsed time: 0.0929055 seconds.
+Elapsed time: 0.0923462 seconds.
+
+--------------std Resize Point2D---------------
+Elapsed time: 0.121409 seconds.
+Elapsed time: 0.102097 seconds.
+Elapsed time: 0.108212 seconds.
+Elapsed time: 0.0927176 seconds.
+Elapsed time: 0.0944766 seconds.
+Elapsed time: 0.0946549 seconds.
+Elapsed time: 0.0966938 seconds.
+Elapsed time: 0.0938317 seconds.
+Elapsed time: 0.0945574 seconds.
+Elapsed time: 0.0995015 seconds.
+
+--------------pool Create Point2D---------------
+Elapsed time: 0.219642 seconds.
+Elapsed time: 0.171867 seconds.
+Elapsed time: 0.17 seconds.
+Elapsed time: 0.183273 seconds.
+Elapsed time: 0.190242 seconds.
+Elapsed time: 0.176774 seconds.
+Elapsed time: 0.170748 seconds.
+Elapsed time: 0.174267 seconds.
+Elapsed time: 0.174981 seconds.
+Elapsed time: 0.17339 seconds.
+
+--------------malloc Create Point2D---------------
+Elapsed time: 0.17857 seconds.
+Elapsed time: 0.170772 seconds.
+Elapsed time: 0.172059 seconds.
+Elapsed time: 0.170825 seconds.
+Elapsed time: 0.168595 seconds.
+Elapsed time: 0.167521 seconds.
+Elapsed time: 0.177944 seconds.
+Elapsed time: 0.182568 seconds.
+Elapsed time: 0.178723 seconds.
+Elapsed time: 0.177064 seconds.
+
+--------------std Create Point2D---------------
+Elapsed time: 0.208085 seconds.
+Elapsed time: 0.169348 seconds.
+Elapsed time: 0.178989 seconds.
+Elapsed time: 0.174532 seconds.
+Elapsed time: 0.172871 seconds.
+Elapsed time: 0.168033 seconds.
+Elapsed time: 0.166095 seconds.
+Elapsed time: 0.171932 seconds.
+Elapsed time: 0.169621 seconds.
+Elapsed time: 0.171863 seconds.

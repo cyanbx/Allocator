@@ -11,7 +11,6 @@ private:
     enum {MAX_BYTES = 4096};
     // free_list里的链表个数
     enum {NFREELEISTS = MAX_BYTES / ALIGN};
-
     // 内存池空间的起始和末尾
     static char* start_free;
     static char* end_free;
@@ -145,7 +144,7 @@ public:
     template <class U> Allocator(const Allocator<U>& other) noexcept {};
 
     ~Allocator() {
-        // printf("time: %d\n", malloc_time);
+         //printf("time: %d\n", malloc_time);
     };
 
 
