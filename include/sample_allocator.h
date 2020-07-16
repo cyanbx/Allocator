@@ -4,6 +4,7 @@
 template <class T>
 class sAllocator {
 public:
+    // define member types
     typedef T value_type;
     typedef T* pointer;
     typedef const T* const_pointer;
@@ -17,14 +18,15 @@ public:
         typedef sAllocator<U> other;
     };
 
+    // creates a new allocator instance
     sAllocator() throw() {};
     sAllocator(const sAllocator& other) throw() {};
     template <class U> sAllocator(const sAllocator<U>& other) throw() {};
 
-    ~sAllocator() {
-        // printf("time: %d\n", malloc_time);
-    };
+    // dtor
+    ~sAllocator() {};
 
+    // returns the address of a certain element;
     pointer address(reference x) const {
         return &x;
     }
@@ -32,33 +34,32 @@ public:
         return (const_pointer)&x;
     }
 
+    // allocate memory with size of n * sizeof(T), which is uninitialized
     pointer allocate(size_type n, const void* hint = 0) {
         pointer p = (pointer)::operator new((size_t)(n * sizeof(T)));
-        malloc_time++;
         return p;
     }
 
+    // deallocate the memory allocated before pointed by p
     void deallocate(pointer p, size_type n) {
         ::operator delete(p);
     }
 
+    // return the max memory size available
     size_type max_size() const throw() {
         return size_type(UINT_MAX / sizeof(T));
     }
 
+    // constructs an object in allocated storage
     void construct(pointer p, const_reference val) {
         *p = val;
     }
 
+    // destructs an object in allocated storage
     void destroy(pointer p) {
         p->~T();
     }
 
-    static int malloc_time;
 };
-
-template <class T>
-int sAllocator<T>::malloc_time = 0;
-
 
 #endif

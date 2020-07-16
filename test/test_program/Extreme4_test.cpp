@@ -4,7 +4,7 @@
 #include <cstdio>
 #include <chrono>
 #include "alloc_with_pool.h"
-#include "sample_allocator.h
+#include "sample_allocator.h"
 
 /*With the analysis of Case3, we reduce the reszing size of vector to the same as Case 1 to form Case 4.*/
 /*This case can prove the good performance of MemoryPool when allocating smaller blocks*/

@@ -1,2 +1,0 @@
-C:\Cyanbox\curriculum\oop\mempool_test\test_mempool\Debug\test_mempool.exe
-C:\Cyanbox\curriculum\oop\mempool_test\test_mempool\Debug\test_mempool.pdb
